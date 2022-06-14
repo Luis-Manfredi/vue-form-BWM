@@ -1,125 +1,139 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
+  import introduction from "./components/form_introduction.vue";
+  import business from "./components/form_business_root.vue";
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+  <div class="margin">
+    <div class="container">
+    
+      <div class="intro-container">
+        <!-- <img 
+          src="\src\assets\logo-bw white.png" 
+          alt="logo-bw" 
+          class="logo-bw"> -->
+        <div class="hero-text">
+          <img 
+          src="\src\assets\logo-bw white.png" 
+          alt="logo-bw" 
+          class="logo-bw">
+          <h3>¡En Bestway Marketing estamos encantados de trabajar contigo!</h3>
+          <p>Puedes visitar nuestra página web para explorar otras soluciones al hacer click en el siguiente botón</p>
+          <button>Ir a web</button>
+        </div>
+        <!-- <div style="height: 300px"></div> -->
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <!-- <introduction message="¡A conocernos a fondo!"/> -->
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+      <business title="Cuéntanos de tu marca" />
+
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
 <style>
-@import "@/assets/base.css";
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+  * {
+    font-family: 'Roboto', sans-serif;
   }
-}
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
   body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow: hidden;
+    background-color: whitesmoke;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  button {
+    margin: 10px auto;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: white;
+    color: #02aba4;
+    font-weight: bold;
+  }
+
+  .submit_btn {
+    border-color: #02aba4;
+    color: #02aba4;
+    border-width: 2px;
+  }
+
+  .submit_btn:hover {
+    background-color: #02aba4;
+    color: white;
+  }
+
+  .margin {
     display: flex;
-    place-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
+  .container {
     display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    margin: auto;
+    background-color: white;
+    height: 90vh;
+    width: 1200px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.1);
   }
 
-  header .wrapper {
+  .intro-container {
+    position: relative;
+    height: 100%;
+    width: 600px;
+    /* background-color: #02aba4; */
+    background-image: linear-gradient(rgba(28, 196, 176, 0.7), rgba(28, 196, 176, 0.7)), 
+    url('C:\Users\Manfre\Desktop\Development\web\Formulario_BWM\formulario_BWM\src\assets\teamwork.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .hero-text {
+    width: 300px;
+    padding: 10px;
+    color: white;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
   }
 
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  .logo-bw {
+    margin: 0 auto;
+    height: 300px;
+    width: 300px;
   }
-}
+
 </style>
