@@ -18,32 +18,33 @@
             <form action="">
             <div class="row-form">
                 <div class="form-field">
-                <label for="first_name">Nombre</label>
-                <input type="text" id="first_name" name="first_name" placeholder="Nombre">
+                <label for="firstName">Nombre</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Nombre">
                 </div>
                 <div class="form-field">
-                <label for="last_name">Apellido</label>
-                <input type="text" id="last_name" name="last_name" placeholder="Apellido">
+                <label for="lastName">Apellido</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Apellido">
                 </div>
             </div>
 
             <div class="form-field">
-                <label for="">Dirección</label>
+                <label for="address">Dirección</label>
                 <input type="text" id="address" name="address" style="width: 350px" placeholder="Dirección">
             </div>
 
 
             <div class="form-field">
-                <label for="dropdown_button">Número de teléfono</label>
+                <label for="dropdownButton">Número de teléfono</label>
                 <div class="row-form">
-                <select name="dropdown_button" id="dropdown_btn">
+                <select name="dropdownButton" id="dropdown_btn">
                     <option value="0412">0412</option>
                     <option value="0414">0414</option>
                     <option value="0416">0416</option>
                     <option value="0424">0424</option>
                 </select>
                 <div style="width: 20px"></div>
-                <input type="tel" id="address" name="address" style="width: 260px" placeholder="1234567">
+                <label for="phone" style="display: none;">Teléfono</label>
+                <input type="text" id="phone" name="phone" style="width: 260px" placeholder="1234567">
                 </div>
             </div>
 

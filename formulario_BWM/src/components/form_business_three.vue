@@ -30,12 +30,12 @@
         </div>
 
         <div class="form-field">
-            <label for="partners">Menú o lista de precios</label>
-            <input type="file" id="partners" name="partners" style="" placeholder="">
+            <label for="menuList">Menú o lista de precios</label>
+            <input type="file" id="menuList" name="menuList" placeholder="">
         </div>
 
         <div class="form-field">
-            <label for="avoidTopics">Posicionamiento digital de tu marca</label>
+            <label for="radio">Posicionamiento digital de tu marca</label>
             <div class="row-form">
                 <div class="column-form">
                     <label for="radio_btn">1</label>
